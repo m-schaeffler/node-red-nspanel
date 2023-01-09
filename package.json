@@ -1,0 +1,20 @@
+{
+  "name": "NspUtils",
+  "version": "1.0.0",
+  "description": "utility functions for NsPanel node red integration.",
+  "license": "LGPL-2.1",
+  "homepage": "https://github.com/m-schaeffler/node-red-nspanel/tree/main",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-schaeffler/node-red-nspanel.git"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "main": "nsp_utilities.js",
+  "author": {
+    "name": "Mathias Schäffler",
+    "url": "https://github.com/m-schaeffler"
+  }
+ 
+}
