@@ -1,0 +1,4 @@
+#!/bin/sh
+
+wget http://192.168.11.201/ufsd?download=/lovelace.be -O NsPanel/lovelace.be
+wget http://192.168.11.201/ufsd?download=/autoexec.be -O NsPanel/autoexec.be
