@@ -41,7 +41,66 @@ exports.addEntity = function(type,entity,icon,color,label="",value="")
     return [type,entity,icon,color,label,value];
 }
 
+exports.addPrevButton = function()
+{
+    return exports.addEntity("button", "navigate.prev", "<", exports.colWhite);
+}
+
+exports.addNextButton = function()
+{
+    return exports.addEntity("button", "navigate.next", ">", exports.colWhite);
+}
+
 exports.addWeather = function(time='-',icon='-',data='-')
 {
     return [time,icon,data];
+}
+
+// screensaver functions
+
+exports.saverWeatherEmpty = function()
+{
+    return Array.prototype.concat(
+        ["weatherUpdate","-","-"],
+        NspUtils.addWeather(),
+        NspUtils.addWeather(),
+        NspUtils.addWeather(),
+        NspUtils.addWeather() );
+}
+
+exports.saverColor = function(mainIcon=0,icon1=0,icon2=0,icon3=0,icon4=0)
+{
+    return ["color", esports.colBlack, esports.colWhite, esports.colWhite, esports.colWhite, mainIcon, esports.colWhite, esports.colWhite, esports.colWhite, esports.colWhite, esports.colWhite, icon1, icon2, icon3, icon4, esports.colWhite, esports.colWhite, esports.colWhite, esports.colWhite, esports.colGray, esports.colWhite, esports.colWhite];
+}
+
+exports.saverNotify = function(title="",text="")
+{
+    return ["notify",title,text];
+}
+
+// card functions
+
+exports.cardEntities = function(title,e1,e2=[],e3=[],e4=[])
+{
+    return Array.prototype.concat(
+        ["entityUpd",title],
+        exports.addPrevButton(),
+        exports.addNextButton(),
+        e1,
+        e2,
+        e3,
+        e4 );
+}
+
+exports.cardGrid = exports.cardEntities;
+
+exports.cardWlan = function(title,ssid,passwd)
+{
+    return Array.prototype.concat(
+        ["entityUpd",title],
+        exports.addPrevButton(),
+        exports.addNextButton(),
+        `WIFI:T:WPA;S:${ssid};P:${passwd};;`,
+        exports.addEntity( "text", "iText.test_ssid", exports.iconWifi, exports.colBlue, "SSID", ssid ),
+        exports.addEntity( "text", "iText.test_pw", exports.iconWifiLockOpen, exports.colBlue, "Password", passwd ) );
 }
