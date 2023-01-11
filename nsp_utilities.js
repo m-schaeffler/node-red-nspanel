@@ -62,15 +62,15 @@ exports.saverWeatherEmpty = function()
 {
     return Array.prototype.concat(
         ["weatherUpdate","-","-"],
-        NspUtils.addWeather(),
-        NspUtils.addWeather(),
-        NspUtils.addWeather(),
-        NspUtils.addWeather() );
+        exports.addWeather(),
+        exports.addWeather(),
+        exports.addWeather(),
+        exports.addWeather() );
 }
 
 exports.saverColor = function(mainIcon=0,icon1=0,icon2=0,icon3=0,icon4=0)
 {
-    return ["color", esports.colBlack, esports.colWhite, esports.colWhite, esports.colWhite, mainIcon, esports.colWhite, esports.colWhite, esports.colWhite, esports.colWhite, esports.colWhite, icon1, icon2, icon3, icon4, esports.colWhite, esports.colWhite, esports.colWhite, esports.colWhite, esports.colGray, esports.colWhite, esports.colWhite];
+    return ["color", exports.colBlack, exports.colWhite, exports.colWhite, exports.colWhite, mainIcon, exports.colWhite, exports.colWhite, exports.colWhite, exports.colWhite, exports.colWhite, icon1, icon2, icon3, icon4, exports.colWhite, exports.colWhite, exports.colWhite, exports.colWhite, exports.colGray, exports.colWhite, exports.colWhite];
 }
 
 exports.saverNotify = function(title="",text="")
