@@ -77,6 +77,14 @@ exports.iconBrightness = "";
 exports.iconBrightnessPercent = "";
 exports.iconPalette = "";
 exports.iconPaletteOutline = "";
+exports.iconFan = "";
+exports.iconFanOff = "";
+exports.iconWater = "";
+exports.iconWaterOutline = "";
+exports.iconWaterOff = "";
+exports.iconWaterOffOutline = "";
+exports.iconWaterThermometer = "彩";
+exports.iconWaterThermometerOutline = "徭";
 
 // helper functions
 
