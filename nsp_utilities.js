@@ -85,6 +85,8 @@ exports.iconWaterOff = "";
 exports.iconWaterOffOutline = "";
 exports.iconWaterThermometer = "彩";
 exports.iconWaterThermometerOutline = "徭";
+exports.iconKey = "";
+exports.iconStar = "";
 
 // helper functions
 
