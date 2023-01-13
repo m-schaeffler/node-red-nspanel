@@ -78,6 +78,18 @@ exports.iconBrightnessPercent = "";
 exports.iconPalette = "";
 exports.iconPaletteOutline = "";
 
+// helper functions
+
+exports.scale = function(value,min,max)
+{
+    return 100*(value-min)/(max-min);
+}
+
+exports.unscale = function(value,min,max)
+{
+    return min+(max-min)*value/100;
+}
+
 // Functions for message construction
 
 exports.addEntity = function(type,entity,icon,color,label="",value="")
