@@ -7,7 +7,7 @@ exports.colWhite  = 0xFFFF;
 exports.colRed    = 0xF800;
 exports.colYellow = 0xFFC0;
 exports.colGreen  = 0x07C0;
-exports.colBlue   = 0x422F;
+exports.colBlue   = 0x4393;
 exports.colAqua   = 0x07FF;
 
 // Icons
