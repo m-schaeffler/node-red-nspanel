@@ -1,4 +1,8 @@
- Editor Backups
+# special files
+tools/
+NsPanel/
+
+# Editor Backups
 *~
 
 # Dependency directories
