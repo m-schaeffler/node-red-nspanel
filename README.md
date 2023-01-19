@@ -11,7 +11,8 @@ flashed with [Tasmota / Lovelace UI](https://docs.nspanel.pky.eu/).
 There are some predefined color values: `colBlack`, `colGray`, `colWhite`, `colRed`, `colYellow`, 
 `colGreen`, `colBlue`, `colAqua`
 
-You can also find a lot of icons named `iconXxxx`; for details plesae have a look into the [source code](nsp_utilits.js).
+You can also find a lot of icons named `iconXxxx`; for details plesae have a look into the 
+[source code](nsp_utilities.js).
 
 ### Functions
 
