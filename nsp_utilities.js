@@ -87,6 +87,27 @@ exports.iconWaterThermometer = "彩";
 exports.iconWaterThermometerOutline = "徭";
 exports.iconKey = "";
 exports.iconStar = "";
+exports.iconHome = "";
+exports.iconHomeOutline = "";
+exports.iconHomePower = "賈";
+exports.iconSolarPower = "";
+exports.iconSolarPowerVariant = "全";
+exports.iconHeatingCoil = "类";
+exports.iconFlash = "";
+exports.iconBatteryCharging10 = "";
+exports.iconBatteryCharging100 = "";
+exports.iconBatteryCharging20 = "";
+exports.iconBatteryCharging30 = "";
+exports.iconBatteryCharging40 = "";
+exports.iconBatteryCharging50 = "";
+exports.iconBatteryCharging60 = "";
+exports.iconBatteryCharging70 = "";
+exports.iconBatteryCharging80 = "";
+exports.iconBatteryCharging0 = "";
+exports.iconTransmissionTower = "";
+exports.iconTransmissionTowerExport = "狼";
+exports.iconTransmissionTowerImport = "郎";
+exports.iconTransmissionTowerOff = "隆";
 
 // helper functions
 
@@ -98,6 +119,20 @@ exports.scale = function(value,min,max)
 exports.unscale = function(value,min,max)
 {
     return min+(max-min)*value/100;
+}
+
+exports.calcSpeed = function(value,neg2,neg1,pos1,pos2)
+{
+    if( value < neg2 )
+        return -2;
+    else if( value < neg1 )
+        return -1;
+    else if( value < pos1 )
+        return 0;
+    else if( value < pos2 )
+        return 1;
+    else
+        return 2;
 }
 
 // Functions for message construction
@@ -115,6 +150,11 @@ exports.addPrevButton = function()
 exports.addNextButton = function()
 {
     return exports.addEntity("button", "navigate.next", ">", exports.colWhite);
+}
+
+exports.addPower = function(color,icon,speed,value)
+{
+    return [color,icon,speed,value];
 }
 
 exports.addWeather = function(time='-',icon='-',data='-')
@@ -146,19 +186,17 @@ exports.saverNotify = function(title="",text="")
 
 // card functions
 
-exports.cardEntities = function(title,e1,e2=[],e3=[],e4=[])
+exports.cardEntities = function(title,...e)
 {
     return Array.prototype.concat(
         ["entityUpd",title],
         exports.addPrevButton(),
         exports.addNextButton(),
-        e1,
-        e2,
-        e3,
-        e4 );
+        ...e );
 }
 
-exports.cardGrid = exports.cardEntities;
+exports.cardGrid  = exports.cardEntities;
+exports.cardPower = exports.cardEntities;
 
 exports.cardWlan = function(title,ssid,passwd)
 {
