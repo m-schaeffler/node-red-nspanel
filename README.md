@@ -26,13 +26,19 @@ You can also find a lot of icons named `iconXxxx`; for details plesae have a loo
 
 ##### `function cardEntities(title,...e)`
 
-builds the `entityUpd` data for an entitiy page.
+builds the `entityUpd` data for an entity page.
 The entire command is returned as an array.
 
 |parameter| type | description |
 |:--------|:-----|:------------|
 |title | string | Title of the page|
 |e|array| up to four entities for the page|
+
+##### `function cardGrid(title,...e)`
+s. `cardEntities`.
+
+##### `function cardPower(title,...e)`
+s. `cardEntities`.
 
 ## Author
 
