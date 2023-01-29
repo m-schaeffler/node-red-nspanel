@@ -26,6 +26,27 @@ You can also find a lot of icons named `iconXxxx`; for details plesae have a loo
 
 builds and returns an empty `weatherUpdate` message for the screensaver; the weather data itself must be writen afterwarts into the array.
 
+##### `function saverColor()`
+
+builds and returns a `color` message for the screensaver.
+
+|parameter| type | description |
+|:--------|:-----|:------------|
+|mainIcon| integer | color of the now icon|
+|icon1| integer | color of the icon #1|
+|icon2| integer | color of the icon #2|
+|icon3| integer | color of the icon #3|
+|icon4| integer | color of the icon #4|
+
+##### `function saverNotify()`
+
+builds and returns a `notify` message for the screensaver.
+
+|parameter| type | description |
+|:--------|:-----|:------------|
+|title| string | header of the notification|
+|text| string | text of the notification|
+
 #### Card Functions
 
 ##### `function cardEntities(title,...e)`
