@@ -16,6 +16,28 @@ You can also find a lot of icons named `iconXxxx`; for details plesae have a loo
 
 ### Functions
 
+#### Helper Functions
+
+#### Functions for Message Construction
+
+#### Screensaver Functions
+
+#### Card Functions
+
+##### `function cardEntities(title,...e)`
+
+builds the `entityUpd` data for an entitiy page.
+The entire command is returned as an array.
+
+|parameter| type | description |
+|:--------|:-----|:------------|
+|title | string | Title of the page|
+|e|array| up to four entities for the page|
+
+## Author
+
+[Mathias Schäffler](https://github.com/m-schaeffler)
+
 ## License
 
 LGPL-2.1
