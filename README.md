@@ -22,6 +22,10 @@ You can also find a lot of icons named `iconXxxx`; for details plesae have a loo
 
 #### Screensaver Functions
 
+##### `function saverWeatherEmpty()`
+
+builds and returns an empty `weatherUpdate` message for the screensaver; the weather data itself must be writen afterwarts into the array.
+
 #### Card Functions
 
 ##### `function cardEntities(title,...e)`
