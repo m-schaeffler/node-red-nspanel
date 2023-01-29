@@ -40,6 +40,17 @@ s. `cardEntities`.
 ##### `function cardPower(title,...e)`
 s. `cardEntities`.
 
+##### `function cardWlan(title,ssid,passwd)`
+
+builds the `entityUpd` data for a WLAN QR page.
+The entire command is returned as an array.
+
+|parameter| type | description |
+|:--------|:-----|:------------|
+|title | string | Title of the page|
+|ssid|string| SSID (name) of the WLAN|
+|passwd|string| Password of the WLAN|
+
 ## Author
 
 [Mathias Schäffler](https://github.com/m-schaeffler)
